@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagavad Gita Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .summary-box {
+            background-color: #ffffff;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .summary-box h2 {
+            text-align: center;
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+        .summary-box p {
+            line-height: 1.8;
+            color: #333333;
+            text-align: justify;
+        }
+        .language-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .language-buttons button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .language-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        const translations = {
+            telugu: {
+                title: "భగవద్గీత అధ్యాయం 16: అసుర ప్రవర్తన వివరణ",
+                content: "భగవద్గీతలో అధ్యాయం 16లో, శ్రీకృష్ణుడు దైవీ మరియు అసుర లక్షణాలను వివరిస్తాడు. దైవీ లక్షణాలు శాంతి, వినయం, ఆత్మశుద్ధి, మరియు భక్తితో మోక్షానికి దారితీస్తాయి. అసుర లక్షణాలు క్రూరత్వం, అహంకారం, కోపం, మరియు లోభంతో పతనానికి దారితీస్తాయి. భౌతిక ఆశలు, ద్వేషం, మరియు అధర్మం అసుర లక్షణాలను పెంచుతాయి. శ్రీకృష్ణుడు ధర్మపాలన, నిస్వార్థత, మరియు భక్తి ద్వారా దైవీ లక్షణాలను అలవరుచుకోవాలని సూచిస్తాడు."
+            },
+            english: {
+                title: "Bhagavad Gita Chapter 16: Description of Demonic Nature",
+                content: "In Chapter 16, Lord Krishna explains divine and demonic qualities. Divine traits like humility, self-control, and devotion lead to liberation. Demonic traits such as arrogance, greed, and anger result in downfall. Demonic individuals neglect spiritual truths and indulge in materialistic desires. Krishna advises practicing righteousness, selflessness, and devotion to cultivate divine qualities and attain spiritual progress"
+            },
+            bengali: {
+                title: "ভগবদ্গীতা অধ্যায় ১৬: অসুর প্রকৃতির বর্ণনা",
+                content: "ভগবদ্গীতার ১৬ অধ্যায়ে শ্রীকৃষ্ণ দেবীয় এবং অসুর প্রকৃতির বর্ণনা করেছেন। দেবীয় গুণ যেমন নম্রতা, আত্মনিয়ন্ত্রণ এবং ভক্তি মুক্তির দিকে নিয়ে যায়। অসুর গুণ যেমন অহংকার, লোভ এবং ক্রোধ পতনের কারণ। অসুর প্রকৃতির ব্যক্তিরা ধর্মের পথে না গিয়ে ভোগবিলাসে মগ্ন থাকে। শ্রীকৃষ্ণ ধর্ম পালন এবং ভক্তির মাধ্যমে দেবীয় গুণ অর্জনের পরামর্শ দেন।"
+            },
+            malayalam: {
+                title: "ഭഗവദ്ഗീത അധ്യായം 16: അസുര സ്വഭാവത്തിന്റെ വിവരണം",
+                content: "ഭഗവദ്ഗീതയുടെ 16-മത് അധ്യായത്തിൽ, ശ്രീകൃഷ്ണൻ ദൈവികവും അസുരസ്വഭാവങ്ങളുമാണ് വിശദീകരിച്ചത്. ദൈവികഗുണങ്ങൾ വിനയം, ആത്മനിയന്ത്രണം, ഭക്തി എന്നിവ മോക്ഷത്തിലേക്ക് നയിക്കുന്നു. അസുരഗുണങ്ങൾ অহങ്കാരം, ദേഷ്യം, ലോഭം എന്നിവ നാശത്തിലേക്ക് നയിക്കുന്നു. അധാർമ്മികതയും ഭൗതികാസക്തിയും അസുരസ്വഭാവങ്ങൾ വളർത്തുന്നു. ധർമ്മം, നിസ്വാർത്ഥത, ഭക്തി എന്നിവ പ്രാപിച്ച് ദൈവികഗുണങ്ങൾ കൈവരിക്കണമെന്ന് ശ്രീകൃഷ്ണൻ ഉപദേശിക്കുന്നു."
+            }
+        };
+
+        function changeLanguage(language) {
+            const summaryBox = document.querySelector(".summary-box");
+            const translation = translations[language];
+            summaryBox.querySelector("h2").textContent = translation.title;
+            summaryBox.querySelector("p").textContent = translation.content;
+        }
+    </script>
+</head>
+<body>
+    <div class="summary-box">
+        <h2>भगवद्गीता अध्याय 16: दैवासुर सम्पद विभाग योग</h2>
+        <p>
+            कृपया पुस्तक या कहानी का नाम बताएं, ताकि मैं अध्याय 16 का मौखिक सारांश हिंदी में प्रदान कर सकूं। यदि यह एक पाठ्यपुस्तक या उपन्यास का अध्याय है, तो उसका संदर्भ देना भी मददगार होगा।
+        </p>
+    </div>
+    <div class="language-buttons">
+        <button onclick="changeLanguage('telugu')">Telugu</button>
+        <button onclick="changeLanguage('english')">English</button>
+        <button onclick="changeLanguage('bengali')">Bengali</button>
+        <button onclick="changeLanguage('malayalam')">Malayalam</button>
+    </div>
+</body>
+</html>
+

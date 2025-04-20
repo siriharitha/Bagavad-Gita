@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images.png">
+    <title>Shloka</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar unselectable">
+        <ul>
+            <li onclick="navClick('1')">Shloka-581</li>
+            <li onclick="navClick('2')">Shloka-582</li>
+            <li onclick="navClick('3')">Shloka-583</li>
+            <li onclick="navClick('4')">Shloka-584</li>
+            <li onclick="navClick('5')">Shloka-585</li>
+            <li onclick="navClick('6')">Shloka-586</li>
+            <li onclick="navClick('7')">Shloka-587</li>
+            <li onclick="navClick('8')">Shloka-588</li>
+            <li onclick="navClick('9')">Shloka-589</li>
+            <li onclick="navClick('10')">Shloka-590</li>
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="wallpaper"></div>
+    <div class="shloka1">
+        <p class="shloka-box" id="shloka-box">
+            अगजानन-पद्माकं गजाननम्-अहर्निशम्।<br>
+            अनेकदंतं भक्तानाम् एकदन्तम्-उपास्महे ॥१॥
+        </p>
+        <p class="meaning-box" id="meaning-box">
+            Meaning:This verse describes the mindset of people with demonic qualities. They are driven by endless desires and are consumed by pride, arrogance, and deceit, leading them to engage in unethical deeds
+        </p>
+        <p>Female:</p>
+        <audio id="audPlayer" controls>
+            <source src="https://firebasestorage.googleapis.com/v0/b/shloka070.appspot.com/o/Shloka-1.mp3?alt=media&token=59eaedbe-9c65-4d9c-85a9-a10bd596f397" type="audio/mpeg"> 
+        </audio>
+        <p>Male:</p>
+        <audio id="audPlayer1" controls>
+            <source src="https://firebasestorage.googleapis.com/v0/b/shloka070.appspot.com/o/Shloka-1.mp3?alt=media&token=59eaedbe-9c65-4d9c-85a9-a10bd596f397" type="audio/mpeg"> 
+        </audio>
+        <p>Child:</p>
+        <audio id="audPlayer2" controls>
+            <source src="https://firebasestorage.googleapis.com/v0/b/shloka070.appspot.com/o/Shloka-1.mp3?alt=media&token=59eaedbe-9c65-4d9c-85a9-a10bd596f397" type="audio/mpeg"> 
+        </audio>
+        <div class="buttons">
+        <button onclick="changeText('1')">Telugu</button>
+        <button onclick="changeText('2')">English</button>
+        <button onclick="changeText('3')">Malayalam</button>
+        <button onclick="changeText('4')">Bengali</button>
+
+        <button id="showImageButton" onclick="showImage()">Show Image</button>
+    
+    </div>
+    <!-- Image container (initially hidden) -->
+    <div id="imageContainer" style="display: none; margin-top: 20px;">
+        <img id="displayedImage" src="" alt="Shloka Illustration" style= "max-width:25%; height: 50hv;border:1px solid #ccc;">
+          </div>
+    </div>
+    </div>
+    
+
+</body>
+<script type="module" src="script.js"></script>
+</html>
